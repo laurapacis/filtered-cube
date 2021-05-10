@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+canvas {
+  display: none;
+}
+
+.cube {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* for the 3D CSS */
+  transform-style: preserve-3d;
+  /* if we turn away from the camera view this gets hidden: */
+  backface-visibility: hidden;
+  transform: rotateX(90deg) rotateY(30deg);
+  box-shadow: -18px 20px 20px 20px rgb(255 0 247);
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+}
+
+.cover {
+  transform: translateX(-50%) translateY(-50%) translateZ(100px) rotate(180deg);
+}
+
+.spine {
+  transform: translateX(-50%) translateY(-50%) rotateY(-90deg) translateZ(100px)
+    rotate(180deg);
+}
+
+.top {
+  transform: translateX(-50%) translateY(-50%) rotateY(-180deg)
+    translateZ(100px) rotate(180deg);
+}
+.back {
+  transform: translateX(-50%) translateY(-50%) rotateX(90deg) translateZ(100px)
+    rotate(180deg);
+}
+
+.side {
+  transform: translateX(-50%) translateY(-50%) rotateY(90deg) translateZ(100px)
+    rotate(180deg);
+}
+
+.bottom {
+  transform: translateX(-50%) translateY(-50%) rotateX(-90deg) translateZ(100px)
+    rotate(180deg);
+}
+
+@keyframes animate-shadow {
+  0% {
+    box-shadow: inset -0.9rem -0.9rem 1rem rgb(0 255 66 / 50%),
+      inset 0.9rem 0.9rem 1rem rgb(228 255 0 / 93%),
+      inset 0.9rem -0.9rem 1rem rgb(98 98 255 / 73%),
+      inset -0.9rem 0.9rem 1rem rgb(255 0 247);
+  }
+  100% {
+    box-shadow: inset 0.9rem 0.9rem 1rem rgb(228 255 0 / 93%),
+      inset 0.9rem -0.9rem 1rem rgb(98 98 255 / 73%),
+      inset -0.9rem 0.9rem 1rem rgb(255 0 247),
+      inset -0.9rem -0.9rem 1rem rgb(0 255 66 / 50%);
+  }
+}
