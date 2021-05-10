@@ -114,8 +114,8 @@ const App = () => {
       <form autoComplete='off' noValidate>
         <input
           type='file'
-          id='avatar'
-          name='avatar'
+          id='image'
+          name='image'
           accept='image/png, image/jpeg'
           onChange={handleImage}
         />
