@@ -13,7 +13,9 @@ Deployed with Vercel.
 
 approx. 2 days of work.
 
-<img src="https://media.giphy.com/media/UL7OiJSGyJGM9g2rqg/giphy.gif" width="500">
+## Preview showing state and the triggered action on the redux-devtools
+
+<img src="https://media.giphy.com/media/UL7OiJSGyJGM9g2rqg/giphy.gif" width="700">
 
 ## My approach:
 
