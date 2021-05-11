@@ -21,7 +21,7 @@ approx. 2 days of work.
 
 #### Design
 
-For the showcase of the images I first implemented a carousel-like element, using the library [Swiper.js](https://swiperjs.com/), which is special for this feature. This the code looked like this:
+For the showcase of the images I first implemented a carousel-like element, using the library [Swiper.js](https://swiperjs.com/), which is special for this feature. The code looked like this:
 
 ```
 import React from 'react';
@@ -66,7 +66,7 @@ For the rest of the design and style I decided to go 'low-key' almost as redempt
 
 #### State Management
 
-My first approach (and desire), was building this project using a state machine. Previously I had never heard of this concept, but I found it attractive and at the same time familiar (due to my experience with Redux).
+My first approach (and desire) was building this project using a state machine. Previously I had never heard of this concept, but I found it attractive and at the same time familiar (due to my experience with Redux).
 
 I read [interesting opinionated articles about Redux-reducer as a state machine](https://medium.com/unsplash/strongly-typed-finite-state-machines-with-redux-and-typescript-3aac2b0332f5) (which left me a bit perplexed at the beginning), and I found what became my [favorite stackoverflow thread so far](https://stackoverflow.com/questions/54482695/what-is-an-actual-difference-between-redux-and-a-state-machine-e-g-xstate). I also watched some [introduction tutorials](https://www.youtube.com/watch?v=iDZxjJYMOUQ&t=84s), that gave me the impression of state machines having more "simplicity" and "clarity" in their structure, comparing to Redux.
 
@@ -132,10 +132,6 @@ With a longer deadline I would have:
 - kept learning and understanding State Machines (with XState) and built the web app with this tool instead of Redux.
 - implemented p5.js visual effects or at least the 5p.js `filter()` method for the filters of the images.
 - added the Download Button and `react-file-base64` for file manipulation.
-
-## Personal level of satisfaction
-
-5/10 (6/10 after writing this README)
 
 ## Final thoughts
 
