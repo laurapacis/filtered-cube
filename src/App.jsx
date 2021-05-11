@@ -26,7 +26,7 @@ const App = () => {
       canvas.height = img.height; // ...assigns image's height to canvas
 
       // create the first filtered Image
-      ctx.filter = 'sepia(1) contrast(2) hue-rotate(0deg)';
+      ctx.filter = 'sepia(1) saturate(2))';
       ctx.drawImage(img, 0, 0); // draws the image on canvas
 
       // create the link for the modified Image
@@ -34,7 +34,7 @@ const App = () => {
 
       // clean, draw again and apply the second filter
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.filter = 'contrast(5) hue-rotate(100deg)';
+      ctx.filter = 'sepia(2) contrast(90) hue-rotate(100deg)';
       ctx.drawImage(img, 0, 0); // draws the image on canvas
 
       // create the link for the modified Image
@@ -43,17 +43,17 @@ const App = () => {
       // and again the same x3
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.filter = 'invert(30%) contrast(5) hue-rotate(180deg)';
+      ctx.filter = 'blur(5000) contrast(90)';
       ctx.drawImage(img, 0, 0); 
       const image3 = canvas.toDataURL();
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.filter = 'none';
+      ctx.filter = 'invert(30%) contrast(9) grayscale(100%)';
       ctx.drawImage(img, 0, 0);
       const image4 = canvas.toDataURL();
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.filter = 'hue-rotate(100deg)';
+      ctx.filter = 'invert(30%) contrast(3) saturate(280%)';
       ctx.drawImage(img, 0, 0);
       const image5 = canvas.toDataURL();
 
@@ -86,6 +86,7 @@ const App = () => {
   useEffect(() => {
     addEventListeners();
     return () => removeEventListeners();
+    // eslint-disable-next-line
   }, []);
 
   const addEventListeners = () => {
