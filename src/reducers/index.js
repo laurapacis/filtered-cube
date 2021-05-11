@@ -1,4 +1,5 @@
 import { CREATE } from '../constants/actionTypes';
+// import { DOWNLOAD } from '../constants/actionTypes';
 
 const initialState = {
     images: [],

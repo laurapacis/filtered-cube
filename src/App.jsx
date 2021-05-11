@@ -11,12 +11,11 @@ const App = () => {
 
   const dispatch = useDispatch();
 
-   
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // handleImage(e);
-      dispatch({ type: 'CREATE', payload: data })
-      } 
+  // trigger redux action and store image
+  const handleSubmit = (e) => {
+   e.preventDefault();
+    dispatch({ type: 'CREATE', payload: data })
+  } 
     
 
   //* FILTERS FOR UPLOADED IMAGE
@@ -72,7 +71,6 @@ const App = () => {
       setData([img.src, image1, image2, image3, image4, image5]);
       
     };
-    console.log(data);
   };
 
   //* display all images
@@ -121,30 +119,37 @@ const App = () => {
   }
 
   return (
-    <div className='App'>
-
+    <>
       <div className='cube' style={cubeStyle}>{imageList}</div>
 
-      <form
-        onSubmit={(e) => handleSubmit(e)} autoComplete='off'
+      <div>
+        
+        <form
+        className='form'
+        onSubmit={(e) => handleSubmit(e)}
+        autoComplete='off'
         noValidate>
-        {/* <FileBase
-                type='file'
-                multiple={false}
-          // onDone={({ base64 }) => setData({ ...data, selectedFile: base64 })}
-          onDone={({ base64 }) => setData({  ...data, base64 })}
-            /> */}
-        <input
-          type='file'
-          id='image'
-          name='image'
-          accept='image/png, image/jpeg'
-          onChange={handleImage}
-        />
-        <input type='submit'/>
+        {/* <FileBase type='file' multiple={false} onDone={({ base64 }) => setData({ ...data, selectedFile: base64 })} /> */}
+          
+        <h2>1. Choose your favourite image from your personal computer</h2>
+          <input
+            className='input'
+            type='file'
+            id='image'
+            name='image'
+            accept='image/png, image/jpeg'
+            onChange={handleImage}
+          />
+
+        <h2>2. Press submit to store its state with Redux!</h2>
+          <input
+            className='input'
+            type='submit' />
       </form>
+      </div>
+      
       <canvas id='canvas'>You can hide this</canvas>
-    </div>
+    </>
   );
 };
 
