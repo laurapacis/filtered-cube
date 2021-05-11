@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+// import FileBase from 'react-file-base64';
 import './App.css';
 
 const App = () => {
@@ -7,9 +9,19 @@ const App = () => {
   const [position, setPosition] = useState({ x: 50, y: 50 });
   const [page, setPagePosition] = useState({ x: 200, y: 600 });
 
+  const dispatch = useDispatch();
+
+   
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      // handleImage(e);
+      dispatch({ type: 'CREATE', payload: data })
+      } 
+    
+
   //* FILTERS FOR UPLOADED IMAGE
   const handleImage = (e) => {
-    e.preventDefault();
+    console.log(e.target.files);
     const file = e.target.files[0];
 
     // pass the file info in an image
@@ -58,7 +70,9 @@ const App = () => {
       const image5 = canvas.toDataURL();
 
       setData([img.src, image1, image2, image3, image4, image5]);
+      
     };
+    console.log(data);
   };
 
   //* display all images
@@ -106,13 +120,20 @@ const App = () => {
     top: `${page.y}px`
   }
 
-
   return (
     <div className='App'>
 
       <div className='cube' style={cubeStyle}>{imageList}</div>
 
-      <form autoComplete='off' noValidate>
+      <form
+        onSubmit={(e) => handleSubmit(e)} autoComplete='off'
+        noValidate>
+        {/* <FileBase
+                type='file'
+                multiple={false}
+          // onDone={({ base64 }) => setData({ ...data, selectedFile: base64 })}
+          onDone={({ base64 }) => setData({  ...data, base64 })}
+            /> */}
         <input
           type='file'
           id='image'
@@ -120,6 +141,7 @@ const App = () => {
           accept='image/png, image/jpeg'
           onChange={handleImage}
         />
+        <input type='submit'/>
       </form>
       <canvas id='canvas'>You can hide this</canvas>
     </div>
