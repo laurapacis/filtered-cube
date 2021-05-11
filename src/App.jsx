@@ -141,7 +141,7 @@ const App = () => {
             onChange={handleImage}
           />
 
-        <h2>2. Press submit to store its state with Redux!</h2>
+        <h2>2. Press "submit" to manage its state with Redux!</h2>
           <input
             className='input'
             type='submit' />
