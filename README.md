@@ -15,7 +15,7 @@ approx. 2 days of work.
 
 ## Preview showing state and the triggered action on the redux-devtools
 
-<img src="https://media.giphy.com/media/UL7OiJSGyJGM9g2rqg/giphy.gif" width="700">
+<img src="https://media.giphy.com/media/UL7OiJSGyJGM9g2rqg/giphy.gif" width="500">
 
 ## My approach:
 
