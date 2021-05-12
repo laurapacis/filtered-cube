@@ -13,10 +13,6 @@ Deployed with Vercel.
 
 approx. 2 days of work.
 
-## Preview showing state and the triggered action on the redux-devtools
-
-<img src="https://media.giphy.com/media/UL7OiJSGyJGM9g2rqg/giphy.gif" width="500">
-
 ## My approach:
 
 #### Design
@@ -125,6 +121,14 @@ const dataMachine = Machine({
   );
 ```
 
+#### Redux implementation
+
+This was the most challenging part of the project (as usual). Specially problematic was dispatching the action to the store, since at the beginning I was working with just one `input` for two functions (`handleImage` and `handleSubmit`). Adding and extra Submit button was the solution for it, although from a user experience point of view was not the best option.
+
+The following preview shows the state and the triggered action on the browser redux-devtools, it works!:
+
+<img src="https://media.giphy.com/media/UL7OiJSGyJGM9g2rqg/giphy.gif" width="500">
+
 ## Improvements
 
 With a longer deadline I would have:
@@ -132,6 +136,7 @@ With a longer deadline I would have:
 - kept learning and understanding State Machines (with XState) and built the web app with this tool instead of Redux.
 - implemented p5.js visual effects or at least the 5p.js `filter()` method for the filters of the images.
 - added the Download Button and `react-file-base64` for file manipulation.
+- created a better layout, design and style overall.
 
 ## Final thoughts
 
