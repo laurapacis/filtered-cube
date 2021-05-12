@@ -125,7 +125,7 @@ const dataMachine = Machine({
 
 #### Redux implementation
 
-This was the most challenging part of the project (as usual). Specially problematic was dispatching the action to the store, since at the beginning I was working with just one `input` for two functions (`handleImage` and `handleSubmit`). Adding and extra Submit button was the solution for it, although from a user experience point of view was not the best option.
+This was the most challenging part of the project (as usual). Specially problematic was dispatching the action to the store, since at the beginning I was working with just one `input` for two functions (`handleImage` and `handleSubmit`). Adding an extra Submit button was the solution for it, although from a user experience point of view was not the best option.
 
 The following preview shows the state and the triggered action on the browser redux-devtools, it works!:
 
@@ -142,6 +142,6 @@ With a longer deadline I would have:
 
 ## Final thoughts
 
-On one hand, I wish I would have decided to use Redux from the beginning so I could have more time to implement `react-file-base64`and the Download button, but on the other hand, I am glad I could spend some time expanding my knowledge about state machines.
+On one hand, I wish I would have decided to use Redux from the beginning so I could have more time to implement `react-file-base64` and the Download button, but on the other hand, I am glad I could spend some time expanding my knowledge about state machines.
 
 With this project, I learned not only about new topics but also about the importance of prioritizing and making decisions.
